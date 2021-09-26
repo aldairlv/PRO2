@@ -33,10 +33,8 @@ void clasificacio(const matriz& m, vector<result>& r){
             if (i != pos) {
                 r[pos].marcats += m[pos][i].first + m[i][pos].second;
                 r[pos].rebuts += m[pos][i].second + m[i][pos].first;
-                //filas
-		if (m[pos][i].first > m[pos][i].second) r[pos].punts += 3;
+                if (m[pos][i].first > m[pos][i].second) r[pos].punts += 3;
                 else if (m[pos][i].first == m[pos][i].second) r[pos].punts += 1;
-                //columnas
                 if (m[i][pos].first < m[i][pos].second) r[pos].punts += 3;
                 else if (m[i][pos].first == m[i][pos].second) r[pos].punts += 1;
 	    }
